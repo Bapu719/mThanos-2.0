@@ -1,0 +1,87 @@
+
+{
+  "name": "Thanos 2.0 (BAPU)",
+  "description": "Telegram group manager bot ....!",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3"
+  ],
+  "repository": "https://github.com/Bapu719/Thanos-2.0",
+  "env": {
+    "ENV": {
+      "description": " ANYTHING = allowing automated env variables",
+      "value": "ANYTHING"
+    },
+    "TOKEN": {
+      "description": "The bot token.",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Owner's ID get it from your Json of any message forwarded to Json",
+      "value": "722295218"
+    },
+    "OWNER_USERNAME": {
+      "description": "Owner's Username",
+      "value": "m_anti_korona"
+    },
+    "WEBHOOK": {
+      "description": "ANYTHING = allowing webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "URL": {
+      "description": "APP LINK (APP NAME AS A SUBDOMAIN OF HEROKU) https://appname.herokuapp.com/",
+      "value": ""
+    },
+    "MESSAGE_DUMP": {
+      "description": "optional: A MESSAGE CENTRE WHERE ARE THE GARBAGE MSGS WILL BE STORED",
+      "value": "-1007777777777"
+    },
+    "SUDO_USERS": {
+      "description": "id's of SUDO USERS separated by space ie people with powers of all less than the owner",
+      "value": "960608737 832981547 857893298 944888785 847621906 993937385"
+    },
+    "SUPPORT_USERS": {
+      "description": "id's of SUPPORT USERS separated by space ie people can gban/ungban, nothing elsE",
+      "value": "960608737 832981547 857893298 944888785 847621906 993937385 "
+    },
+    "WHITELIST_USERS": {
+      "description": "id's of WHITE LISTED separated by space ie people - they can't be banned.",
+      "value": "960608737 832981547 857893298 944888785 847621906 993937385"
+    },
+    "DONATION_LINK": {
+      "description": "Link for donation (for garib people).",
+      "value": "Your Link"
+    },
+    "PORT": {
+      "description": "Port to use for your webhooks",
+      "value": "8443"
+    },
+    "DEL_CMDS": {
+      "description": "IF YOU WANT TO DELETE THE COMMANDS USED BY USERS NOT SUPPOSED TO.",
+      "value": "True"
+    },
+    "STRICT_GBAN": {
+      "description": "Person that was gban earlier and joins a new group in which your bot is too will be banned right after he sends anything.",
+      "value": "True"
+    },
+    "ALLOW_EXCL": {
+      "description": "This will allow ! to be used as well as /.",
+      "value": "True"
+    },
+    "BAN_STICKER": {
+      "description": "STICKERS USED AFTER BANNING ANYONE. Use https://telegram.dog/ShowJsonBot to get the file_id",
+      "value": "CAACAgUAAxkBAAEEhBBesBJbXxSbSM-b67YjFyQX5L0_lwACTwADslkNK2oaBPGvL1cXGQQ"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ]
+}
