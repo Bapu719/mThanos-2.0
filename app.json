@@ -9,7 +9,7 @@
     "manager",
     "3"
   ],
-  "repository": "https://github.com/Bapu719/Thanos-2.0",
+  "repository": "https://github.com/Bapu719/mThanos-2.0",
   "env": {
     "ENV": {
       "description": " ANYTHING = allowing automated env variables",
