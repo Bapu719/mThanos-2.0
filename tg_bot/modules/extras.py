@@ -285,8 +285,8 @@ BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
-DOOM_HANDLER = DisableAbleCommandHandler("doom", table)
-ABUSE_HANDLER = DisableAbleCommandHandler("abuse", table)
+DOOM_HANDLER = DisableAbleCommandHandler("doom", doom)
+ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
 
 
 dispatcher.add_handler(ROLL_HANDLER)
