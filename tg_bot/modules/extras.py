@@ -242,7 +242,86 @@ def doom(bot: Bot, update: Update):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_text("Doom\n Vishali...\n Aur Nilam ki ma ka EX...")		
 
-	
+
+@run_async
+def sam(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("@AmateurChatter\n Sam...\n Choti.....")		
+
+
+@run_async
+def bhagwan(bot: Bot, update: Update):
+    # reply to correct message
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("@devil0707\n Shanti wale...\n ye bhagwan h...")		
+
+
+
+@run_async
+def bossraja(bot: Bot, update: Update):
+    # reply to correct message
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Boss Raja\n Ye pata nhi kon h \n all i know is that he is A GOOD PERSON...")		
+
+
+
+@run_async
+def nilam(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Vishali😘😘 ka bhai\n DOOM iski ma ka EX...\n ye 5th gender h...")		
+
+
+
+@run_async
+def mmiska(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Miska\n choti behen ...\n No abuse wale...")		
+
+
+
+@run_async
+def cool(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Rahul Cool\n chota bhai ...\n paisey wale bhaiya...")		
+
+
+
+@run_async
+def smoke(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Dhua lol\n chota bhai ...\n isko GF dila do🥺...")		
+
+
+
+@run_async
+def rudhra(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Rudhra😛 \n Chota bhai ...\n isko tu tadak nhu pasand😁😁...")		
+
+
+
+@run_async
+def hardik(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("RAHUL GHANDI LOL😛 \n Ghanti bolta h ye muje lol ...\n Isko thapado se marna h ek din😁😁...")
+
+		
+
+@run_async
+def lonelyloki(bot: Bot, update: Update):
+    # idhar se response jayega
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Is lawde ka name hi kyu lete ho yaar \n ye wo h jo apne pita ji ke ASHLEELTA ke nakshey kadam pe chal rha h ...\n iski VISHALI😍😍😘😘...")
+
+
+
 def decide(bot: Bot, update: Update):
         r = randint(1, 100)
         if r <= 65:
@@ -251,6 +330,8 @@ def decide(bot: Bot, update: Update):
             update.message.reply_text("NoU.")
         else:
             update.message.reply_text("Maybe.")
+
+
             
 def table(bot: Bot, update: Update):
             r = randint(1, 100)
@@ -273,6 +354,16 @@ __help__ = """
  - /rlg : Join ears,nose,mouth and create an emo ;-;
  - /zal <any text> : zalgofy! your text
  - /doom : will return information 'bout the boss
+ - /sam : will return information 'bout SAM
+ - /bhagwan : will return information 'bout BHAGWAN
+ - /nilam : will return information 'bout madrchod Nilam (lonely loki)
+ - /bossraja : will return information about boss raja 
+ - /mmiska : will return information about Miska
+ - /cool : will return information about rahul cool
+ - /smoke : wil return information about smoke 
+ - /rudhra : will return information about rudhra
+ - /hardik : will return infirmation about Hardik chaudhary
+ - /lonelyloki : will return information 'bout Nilam lonelyloki
  Lyrics pluggin bhi arha h boht jald GENUIS ke API se.
 """
 
@@ -287,6 +378,17 @@ DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 DOOM_HANDLER = DisableAbleCommandHandler("doom", doom)
 ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
+SAM_HANDLER = DisableAbleCommandHandler("sam", sam)
+BHAGWAN_HANDLER = DisableAbleCommandHandler("bhagwan", bhagwan)
+NILAM_HANDLER = DisableAbleCommandHandler("nilam", nilam)
+BOSSRAJA_HANDLER = DisableAbleCommandHandler("bossraja", bossraja)
+MMISKA_HANDLER = DisableAbleCommandHandler("mmiska", mmiska)
+COOL_HANDLER = DisableAbleCommandHandler("cool", cool)
+SMOKE_HANDLER = DisableAbleCommandHandler("smoke", smoke)
+RUDHRA_HANDLER = DisableAbleCommandHandler("rudhra", rudhra)
+HARDIK_HANDLER = DisableAbleCommandHandler("hardik", hardik)
+LONELYLOKI_HANDLER = DisableAbleCommandHandler("lonelyloki", lonelyloki)
+
 
 
 dispatcher.add_handler(ROLL_HANDLER)
@@ -298,4 +400,17 @@ dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 dispatcher.add_handler(DOOM_HANDLER)
 dispatcher.add_handler(ABUSE_HANDLER)
+dispatcher.add_handler(SAM_HANDLER)
+dispatcher.add_handler(BHAGWAN_HANDLER)
+dispatcher.add_handler(NILAM_HANDLER)
+dispatcher.add_handler(BOSSRAJA_HANDLER)
+dispatcher.add_handler(MMISKA_HANDLER)
+dispatcher.add_handler(COOL_HANDLER)
+dispatcher.add_handler(SMOKE_HANDLER)
+dispatcher.add_handler(RUDHRA_HANDLER)
+dispatcher.add_handler(HARDIK_HANDLER)
+dispatcher.add_handler(LONELYLOKI_HANDLER)
+
+
+
 
