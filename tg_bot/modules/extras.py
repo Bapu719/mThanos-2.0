@@ -235,6 +235,13 @@ def rlg(bot: Bot, update: Update):
     ears = random.choice(EARS)
     repl = format(ears + eyes + mouth + eyes + ears)
     update.message.reply_text(repl)
+
+@run_async
+def doom(bot: Bot, update: Update):
+    # reply to correct message
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text("Doom\n Vishali...\n Aur Nilam ki ma ka EX...")		
+
 	
 def decide(bot: Bot, update: Update):
         r = randint(1, 100)
@@ -265,6 +272,7 @@ __help__ = """
  - /roll : Roll a dice.
  - /rlg : Join ears,nose,mouth and create an emo ;-;
  - /zal <any text> : zalgofy! your text
+ - /doom : will return information 'bout the boss
  Lyrics pluggin bhi arha h boht jald GENUIS ke API se.
 """
 
@@ -277,6 +285,9 @@ BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
+DOOM_HANDLER = DisableAbleCommandHandler("doom", table)
+ABUSE_HANDLER = DisableAbleCommandHandler("abuse", table)
+
 
 dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
@@ -285,3 +296,6 @@ dispatcher.add_handler(BLUETEXT_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(DOOM_HANDLER)
+dispatcher.add_handler(ABUSE_HANDLER)
+
