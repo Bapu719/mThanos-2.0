@@ -200,11 +200,37 @@ EARS = [
 TOSS = (
     "Heads",
     "Tails",
+)--
+
+TDS = (
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
 )
 
 @run_async
 def roll(bot: Bot, update: Update):
     update.message.reply_text(random.choice(range(1, 7)))
+
+    
+ #TDS idar se start hoga  
+@run_async
+def tds2(bot: Bot, update: Update):
+    update.message.reply_text(random.choice(range(1, 2)))
+
+@run_async
+def tds3(bot: Bot, update: Update):
+    update.message.reply_text(random.choice(range(1, 3)))
+
+@run_async
+def tds4(bot: Bot, update: Update):
+    update.message.reply_text(random.choice(range(1, 4)))
+
+@run_async
+def tds5(bot: Bot, update: Update):
+    update.message.reply_text(random.choice(range(1, 5)))        
 	
 def toss(bot: Bot, update: Update):
     update.message.reply_text(random.choice(TOSS))
@@ -388,6 +414,11 @@ SMOKE_HANDLER = DisableAbleCommandHandler("smoke", smoke)
 RUDHRA_HANDLER = DisableAbleCommandHandler("rudhra", rudhra)
 HARDIK_HANDLER = DisableAbleCommandHandler("hardik", hardik)
 LONELYLOKI_HANDLER = DisableAbleCommandHandler("lonelyloki", lonelyloki)
+TDS2_HANDLER = DisableAbleCommandHandler("tds2", tds2)
+TDS3_HANDLER = DisableAbleCommandHandler("tds3", tds3)
+TDS4_HANDLER = DisableAbleCommandHandler("tds4", tds4)
+TDS5_HANDLER = DisableAbleCommandHandler("tds5", tds5)
+
 
 
 
@@ -410,6 +441,13 @@ dispatcher.add_handler(SMOKE_HANDLER)
 dispatcher.add_handler(RUDHRA_HANDLER)
 dispatcher.add_handler(HARDIK_HANDLER)
 dispatcher.add_handler(LONELYLOKI_HANDLER)
+dispatcher.add_handler(TDS2_HANDLER)
+dispatcher.add_handler(TDS3_HANDLER)
+dispatcher.add_handler(TDS4_HANDLER)
+dispatcher.add_handler(TDS5_HANDLER)
+
+
+
 
 
 
